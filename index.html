@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="GitLab Pages">
+        <title>Meltdown Legion</title>
+        <link rel="shortcut icon" type="image" href="Images/MLegionLogo-removebg.png">
+        <script src="LoadHeaderFooter.js"></script>
+        <script src="LandingPage.js"></script>
+        <script src="LoadNewsSection.js"></script>
+        <script src="LoadFaqSection.js"></script>
+        <script src="LoadDynamicAboutUsSection.js"></script>
+        <link rel="stylesheet" href="LandingPage.css">
+    </head>
+
+    <body>
+
+        <header id="header"></header> <!-- Hier wird der Header geladen -->
+
+        <!-- Banner -->
+        <br><br><br><br>
+
+        <!-- About Us -->
+        <section id="aboutUs" class="aboutUsSection">
+            <div class="aboutUsContent">
+                <div class="aboutUsHeading">
+                    <h1>Welcome to Meltdown Legion</h1>
+                </div>
+                <div class="dynamicTextContainer">
+                    <span class="staticText">WE ARE</span>
+                    <span id="dynamicText" class="dynamicText"></span>
+                </div>
+                <div class="aboutUsText">
+                    <p>An influential esports organization was founded. It quickly gained recognition for
+                    its performances and innovative strategies. The founders aimed to create a top-tier organization that excels
+                    in tournaments while prioritizing player welfare and development.</p>
+                    <p>The organization achieved several impressive milestones. They won world championships in two different
+                    games and were the first North American team to win a Counter-Strike Major.To this day, this esports
+                    organization remains one of the best globally. It continues to drive the development of esports and is
+                    beloved by the community.</p>
+                    <p>This organization has established itself through its achievements and commitment as a leading esports
+                    team. It remains an important part of the esports landscape and continues to push the sport forward.</p>
+                </div>
+            </div>
+            <div class="aboutUsLogo">
+                <img src="Images/MLegionLogo-removebg.png" class="aboutUsLogoImage" alt="aboutUsLogo">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Teams Section -->
+        <section id="teams" class="teamsSection">
+            <div class="centralHeading"><h1>&#x2014 Our Teams &#x2014</h1></div>
+
+            <!-- Container für die Team-Bilder -->
+            <div class="teamsContainer">
+
+                <!-- Linkes Bild -->
+                <div class="teamImage small" id="leftTeamImage">
+                    <button class="arrowButton" onclick="rotateTeams('right')">&lt;</button>
+                    <a href="TeamDetails.html?team=Rainbow6Siege"><img src="Images/Rainbow6Siege.jpg" alt="Team Left"></a>
+                </div>
+
+                <!-- Zentrales großes Bild -->
+                <div class="teamImage large centralImage" id="centralTeamImage">
+                    <a href="TeamDetails.html?team=CsGo"><img src="Images/CsGO.jpg" alt="Team Center"></a>
+                </div>
+
+                <!-- Rechtes Bild -->
+                <div class="teamImage small" id="rightTeamImage">
+                    <button class="arrowButton" onclick="rotateTeams('left')">&gt;</button>
+                    <a href="TeamDetails.html?team=LeagueOfLegends"><img src="Images/LeagueOfLegends.jpg" alt="Team     Right"></a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- News Section -------------------------------------------------------------------  -->
+        <section id="news" class="newsSection">
+            <div class="centralHeading"><h1>&#x2014 Latest News &#x2014</h1></div>
+            <div class="newsResultsContainer" id="NewsResCont">
+                <!-- Container für drei News-Boxen -->
+                <div class="newsContainer">
+
+                    <!-- Erste News-Box -->
+                    <div class="newsBox" id="newsBox1">
+                        <div class="newsImage" id="newsImage1"><!-- Bild wird über JS eingefügt --></div>
+                        <div class="newsMeta">
+                            <span class="newsAuthor" id="newsAuthor1"><i class="icon-person"></i> Author</span>
+                            <span class="newsDate" id="newsDate1"><i class="icon-calendar"></i> Date</span>
+                        </div>
+                        <h2 class="newsTitle" id="newsTitle1">News Title 1</h2>
+                        <p class="newsSnippet" id="newsSnippet1">News text preview goes here...</p>
+                        <a href="#" class="readMore" id="readMore1">Read more</a>
+                    </div>
+
+                    <!-- Zweite News-Box -->
+                    <div class="newsBox" id="newsBox2">
+                        <div class="newsImage" id="newsImage2"><!-- Bild wird über JS eingefügt --></div>
+                        <div class="newsMeta">
+                            <span class="newsAuthor" id="newsAuthor2"><i class="icon-person"></i> Author</span>
+                            <span class="newsDate" id="newsDate2"><i class="icon-calendar"></i> Date</span>
+                        </div>
+                        <h2 class="newsTitle" id="newsTitle2">News Title 2</h2>
+                        <p class="newsSnippet" id="newsSnippet2">News text preview goes here...</p>
+                        <a href="#" class="readMore" id="readMore2">Read more</a>
+                    </div>
+
+                    <!-- Dritte News-Box -->
+                    <div class="newsBox" id="newsBox3">
+                        <div class="newsImage" id="newsImage3"><!-- Bild wird über JS eingefügt --></div>
+                        <div class="newsMeta">
+                            <span class="newsAuthor" id="newsAuthor3"><i class="icon-person"></i> Author</span>
+                            <span class="newsDate" id="newsDate3"><i class="icon-calendar"></i> Date</span>
+                        </div>
+                        <h2 class="newsTitle" id="newsTitle3">News Title 3</h2>
+                        <p class="newsSnippet" id="newsSnippet3">News text preview goes here...</p>
+                        <a href="#" class="readMore" id="readMore3">Read more</a>
+                    </div>
+                </div>
+                <!-- Turnier-Box neben den News-Boxen, Inhalt wird dynamisch eingefügt -->
+                <div class="tournamentBox" id="tournamentBox">
+                    <div class="tournamentStatus" id="tournamentStatus">
+                        <button id="btnUpcoming" class="statusButton" onclick="showUpcoming(this)">Upcoming</button>
+                        <span class="statusDivider">/</span>
+                        <button id="btnPast" class="statusButton" onclick="showPast(this)">Past</button>
+                    </div>
+                    <div class="tournamentName" id="tournamentName">Tournament XY</div>
+                    <div class="tournamentResult" id="tournamentResult">
+                    <!-- Hier wird entweder Datum oder n gewonnene Runden eingefügt-->
+                    </div>
+                    <div class="tournamentOutcome" id="tournamentOutcome"></div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faqSection">
+            <div class="centralHeading"><h1>&#x2014 FAQ &#x2014</h1></div>
+
+            <div class="faqContainer">
+                <!-- FAQ 1 -->
+                <div class="faqItem">
+                    <button class="faqQuestion" onclick="toggleAnswer('answer1')">What is Meltdown Legion?</button>
+                    <div class="faqAnswer" id="answer1">Meltdown Legion is a leading esports organization known for its
+                        dedication to player welfare and success in tournaments.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faqItem">
+                    <button class="faqQuestion" onclick="toggleAnswer('answer2')">How do I join Meltdown Legion?</button>
+                    <div class="faqAnswer" id="answer2">To join Meltdown Legion, you can apply by clicking on the discord icon
+                        at the bottom of the website or clicking <a href="https://discord.gg/meltdown-legion" target="_blank">here</a>.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faqItem">
+                    <button class="faqQuestion" onclick="toggleAnswer('answer3')">Which games does Meltdown Legion compete in?</button>
+                    <div class="faqAnswer" id="answer3">We currently compete in games like CS2, Rainbow Six Siege, and League of
+                        Legends.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faqItem">
+                    <button class="faqQuestion" onclick="toggleAnswer('answer4')">Where can I watch Meltdown Legion matches?</button>
+                    <div class="faqAnswer" id="answer4">Our matches are streamed on popular platforms like Twitch and YouTube.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contactSection">
+            <div class="centralHeading"><h1>&#x2014 Contact Us &#x2014</h1></div>
+
+            <div class="contactFormContainer">
+                <!-- <form action="submit_form.php" method="POST" class="contactForm"> -->
+                <form class="contactForm">
+                    <!-- Name Field -->
+                    <div class="formField">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="formField">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+
+                    <!-- Subject Field -->
+                    <div class="formField">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="formField">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Your message" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="formField">
+                        <button type="submit" onclick="console.log('huhu')" class="submitButton">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer id="footer"></footer> <!-- Hier wird der Footer geladen -->
+    </body>
+</html>

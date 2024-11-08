@@ -1,0 +1,47 @@
+.ImpressumContent {
+    width: 50%; /* Text-Container auf 50% der Gesamtbreite setzen */
+    display: flex; /* Flexbox für horizontale Anordnung */
+    justify-content: space-between; /* Platz zwischen Text und Logo */
+    flex-direction: column; /* Stellt sicher, dass Überschrift und Text untereinander erscheinen */
+    align-items: center; /* Vertikale Zentrierung */
+}
+
+.ImpressumHeading{
+    margin: 0 auto; /* Zentriert den Bereich horizontal */
+    font-size: larger;
+    color: azure;
+    max-width: 50%;
+}
+
+.ImpressumText{
+    font-size: smaller;
+    color: azure;
+    line-height: 1.5; /* Abstand zwischen Zeilen verbessern */
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+/* Um den Button zu zentrieren */
+.translateButtonContainer {
+    display: flex;           /* Flexbox aktivieren */
+    justify-content: center;  /* Zentriert horizontal */
+    align-items: center;      /* Zentriert vertikal */
+  }
+  
+  .translateButton {
+    display: flex;            /* Flexbox für Inhalt (Text + Bild) */
+    align-items: center;      /* Inhalt vertikal zentrieren */
+    background-color: #2e2e2e; /* Button-Hintergrundfarbe */
+    color: azure;             /* Textfarbe */
+    border: none;             /* Entfernt den Button-Rahmen */
+    padding: 10px 20px;       /* Innenabstand des Buttons */
+    cursor: pointer;          /* Cursor bei Hover */
+    font-size: 16px;          /* Schriftgröße */
+    border-radius: 5px;       /* Abgerundete Ecken */
+  }
+  
+  .flagIcon {
+    width: 24px;              /* Breite des Flaggen-Icons */
+    height: auto;             /* Automatische Höhe */
+    margin-right: 10px;       /* Abstand zwischen Flagge und Text */
+  }
